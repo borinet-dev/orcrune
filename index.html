@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<script>
+		(function() {
+			// 사용자 에이전트 정보를 가져옵니다.
+			var userAgent = navigator.userAgent.toLowerCase();
+
+			// 브라우저가 크롬인지 확인합니다.
+			var isChrome = /chrome/.test(userAgent) && !/edge|edg|opr/.test(userAgent);
+
+			// 크롬이 아니라면 팝업 창을 띄웁니다.
+			if (!isChrome) {
+				alert('이 페이지는 크롬에 최적화되어 있습니다. 크롬 브라우저에서 접속해 주세요.');
+			}
+		})();
+	</script>
+	<style>
+		.count-color { color: red; text-shadow: 2px 2px 2px black; }
+		.info-color { color: yellow; text-shadow: 2px 2px 2px black; }
+		.info-color2 { color: red; text-shadow: 1px 1px 1px black; }
+		.info-color3 { color: black; text-shadow: 1px 1px 1px gray; }
+		.s1 { text-shadow: 4px 4px 5px black; }
+		.s2 { text-shadow: 2px 2px 2px black; }
+		.s3 { text-shadow: 1px 1px 1px black; }
+		.bg-2a2a2a { background-color: #2a2a2a !important; }
+		.bg-2a2a2a .nav-link { color: white !important; transition: color 0.3s ease-in-out; }
+		.bg-2a2a2a .nav-link:hover { color: #90ee90 !important; }
+		.border-bottom { color: red !important; text-decoration: none; transition: color 0.3s ease-in-out; }
+		.border-bottom:hover { color: darkred !important; }
+		body { background-color: #2a2a2a; color: white; font-family: sans-serif; line-height: 1.6; }
+		table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+		th, td { border: 1px solid white; padding: 8px; }
+		th { background-color: #444; }
+		h3 { margin-top: 30px; color: #ffd700; }
+	</style>
+	<meta charset="utf-8">
+	<title>나비</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="https://borinet-dev.github.io/img/wassub_icon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="https://borinet-dev.github.io/css/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="https://borinet-dev.github.io/css/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://borinet-dev.github.io/css/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://borinet-dev.github.io/css/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="https://borinet-dev.github.io/css/css/board.css" rel="stylesheet">
+	<link href="https://borinet-dev.github.io/css/css/style2.css" rel="stylesheet">
+	<link href="https://borinet-dev.github.io/css/css/style3.css" rel="stylesheet">
+</head>
+
+<body style="background-color: #2a2a2a;">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-2a2a2a navbar-dark sticky-top p-0">
+        <a href="https://l2jnavi.org" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="https://raw.githubusercontent.com/borinet-dev/img/main/logo_wassub.png" style="max-width: auto; height: auto;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+				<a onclick="window.open('https://discord.gg/u7MJEsPpUJ')" style="cursor:pointer;" class="nav-item nav-link"><b>디스코드 입장하기</b></a>
+                <a onclick="window.open('../../AccountClassic/', '', 'location=no, width=730, height=650')" style="cursor:pointer;" class="nav-item nav-link"><b>계정관리</b></a>
+				<a onclick="window.open('../../downloads/', '', 'location=no, width=850, height=439, scrollbars=yes')" style="cursor:pointer;" class="nav-item nav-link"><b>다운로드</b></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-3 text-white mb-4 animated slideInDown s2">오크 부족의 전설 룬 이벤트</h1>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Start -->
+<div id="viewer" class="white viewer_style rd_nav_blk">
+	<div style="background-color: #2a2a2a; color: white; id="bd_7139_123793" class="bd clear   hover_effect" data-default_style="viewer" data-bdfilestype="" data-bdnavside="N" style="max-width:px">
+	<article>
+
+<div style="box-sizing: border-box; color: rgb(31, 31, 31); font-family: -apple-system, BlinkMacSystemFont, Roboto, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Microsoft JhengHei&quot;, meiryo, &quot;MS PGothic&quot;, 돋움, Dotum, sans-serif; font-size: 15px;"><span style="color: rgb(51, 102, 153);"><img src="https://raw.githubusercontent.com/borinet-dev/newyear/main/main_1.png" alt="main.png" width="650" editor_component="image_link" />
+<br /></span></div>
+<p><br /></p>
+<p style="line-height: 25px; font-family: sans-serif; letter-spacing: -1px; font-size: 20px; font-weight: bold; color: rgb(255, 177, 26); text-shadow: midnightblue 1px 1px 1.2px; border-bottom: 3px solid rgb(255, 177, 26);">이벤트 기간: 7월 10일(목) 07시&nbsp;~ 7월 31일(목) 오후 8시 까지</p>
+<br>
+<br>
+<img src="https://borinet-dev.github.io/orcrune/event.png" width="650" editor_component="image_link" /><br><br>
+	<div class="document_123793_4 xe_content">
+	  <p><font color=white>1. 각 마을 이벤트 NPC ‘셰넌’을 통해 ‘빛바랜 오크 전설 룬’을 계정당 1회 획득할 수 있습니다.</font></p>
+    <table style="color:white; border:1px solid white; border-collapse:collapse;">
+      <tr><th style="color:white; border:1px solid white;"><center>아이템명</th><th style="color:white; border:1px solid white;"><center>설명</th></tr>
+      <tr><td style="color:white; border:1px solid white;"><center><img src="file:///C:/Users/Administrator/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94%20(3)/%E2%80%98%EC%98%A4%ED%81%AC%20%EB%B6%80%EC%A1%B1%EC%9D%98%20%EC%A0%84%EC%84%A4%20%EB%A3%AC%20%EC%8B%9C%EC%A6%8C%202%E2%80%99%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%95%88%EB%82%B4%20_%20%EB%A6%AC%EB%8B%88%EC%A7%802-NCSOFT_files/3._%EB%B9%9B%EB%B0%94%EB%9E%9C_%EC%98%A4%ED%81%AC_%EC%A0%84%EC%84%A4_%EB%A3%AC.png"><br>빛바랜 오크 전설 룬</td><td style="color:white; border:1px solid white;"><center>‘붉은빛의 결정’과 합성하여 강화 가능.<br><br><br><font color=red>&lt;이벤트 종료 후에도 삭제되지 않습니다.&gt;</font></td></tr>
+    </table>
+	  <p><font color=white>2. 이벤트 기간 동안 셰넌을 통해 ‘붉은빛의 오라’ 버프를 받을 수 있으며, 버프가 적용된 상태에서 사냥 시 ‘붉은빛의 결정’을 획득할 수 있습니다.</p>
+	  <p><font color=white> - 사냥터에서 마을로 귀환 시 ‘붉은빛의 오라’ 버프가 제거됩니다.</p>
+<br><br>
+	  [이벤트 버프]
+	  <table style="color:white; border:1px solid white; border-collapse:collapse;">
+	    <tr><th style="color:white; border:1px solid white;"><center>버프명</th><th style="color:white; border:1px solid white;"><center>효과</th></tr>
+	    <tr><td style="color:white; border:1px solid white;"><center><img src="file:///C:/Users/Administrator/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94%20(3)/%E2%80%98%EC%98%A4%ED%81%AC%20%EB%B6%80%EC%A1%B1%EC%9D%98%20%EC%A0%84%EC%84%A4%20%EB%A3%AC%20%EC%8B%9C%EC%A6%8C%202%E2%80%99%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%95%88%EB%82%B4%20_%20%EB%A6%AC%EB%8B%88%EC%A7%802-NCSOFT_files/5._%EB%B6%89%EC%9D%80%EB%B9%9B%EC%9D%98_%EC%98%A4%EB%9D%BC_-_%EB%B0%9C%EC%83%9D.png"><br>붉은빛의 오라</td><td style="color:white; border:1px solid white;"><center>몬스터 처치 시 확률로 ‘붉은빛의 결정’ 획득<br>모든 크리티컬 확률 5%, 모든 위력 10%,<br>방어력/마법저항 10%, 대미지 5%, EXP/SP 10%,<br>피격 대미지 5% 감소</td></tr>
+	  </table>
+
+<br><br>
+[획득 아이템]
+	  <table style="color:white; border:1px solid white; border-collapse:collapse;">
+	    <tr><th style="color:white; border:1px solid white;"><center>아이템명</th><th style="color:white; border:1px solid white;"><center>설명</th></tr>
+	    <tr><td style="color:white; border:1px solid white;"><center><img src="file:///C:/Users/Administrator/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94%20(3)/%E2%80%98%EC%98%A4%ED%81%AC%20%EB%B6%80%EC%A1%B1%EC%9D%98%20%EC%A0%84%EC%84%A4%20%EB%A3%AC%20%EC%8B%9C%EC%A6%8C%202%E2%80%99%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%95%88%EB%82%B4%20_%20%EB%A6%AC%EB%8B%88%EC%A7%802-NCSOFT_files/6._%EB%B6%89%EC%9D%80%EB%B9%9B%EC%9D%98_%EA%B2%B0%EC%A0%95(%EC%9D%B4%EB%B2%A4%ED%8A%B8).png"><br>붉은빛의 결정(이벤트)</td>
+		<td style="color:white; border:1px solid white;"><center>‘오크 전설 룬’의 합성 재료로 사용. (거래 가능)<br><br><br><font color=red>&lt;이벤트 종료 시 삭제됩니다.&gt;</font></td></tr>
+	  </table>
+<br><br>
+<img src="https://borinet-dev.github.io/orcrune/event2.png" width="650" editor_component="image_link" /><br><br>
+	  <p><font color=white>1. ‘붉은빛의 결정’과 합성하여 ‘오크 전설 룬’을 강화할 수 있습니다.<br>
+	   - 합성 시 30만 아데나의 수수료가 발생하며, 실패 시 룬은 소멸되지 않습니다.</p>
+	  
+	  <br>[아이템 합성]<br>
+	  <img src="file:///C:/Users/Administrator/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94%20(3)/%E2%80%98%EC%98%A4%ED%81%AC%20%EB%B6%80%EC%A1%B1%EC%9D%98%20%EC%A0%84%EC%84%A4%20%EB%A3%AC%20%EC%8B%9C%EC%A6%8C%202%E2%80%99%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%95%88%EB%82%B4%20_%20%EB%A6%AC%EB%8B%88%EC%A7%802-NCSOFT_files/8._%EC%95%84%EC%9D%B4%ED%85%9C_%ED%95%A9%EC%84%B1.png"><br>
+	  - 강화된 ‘오크 전설 룬’은 인벤토리에 소지 시 단계에 맞는 효과가 적용됩니다.
+	  <table style="color:white; border:1px solid white; border-collapse:collapse;">
+	    <tr><th style="color:white; border:1px solid white;"><center>단계</th><th style="color:white; border:1px solid white;"><center>아이템명</th><th style="color:white; border:1px solid white;"><center>효과</th></tr>
+	    <tr><td style="color:white; border:1px solid white;"><center>1</td><td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/orcrune/1.png"><br>빛바랜 오크 전설 룬(1단계)</td><td style="color:white; border:1px solid white;"><center>무기 공격력 증폭 3 증가<br>무기 마법력 증폭 3 증가</td></tr>
+	    <tr><td style="color:white; border:1px solid white;"><center>2</td><td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/orcrune/2.png"><br>빛바랜 오크 전설 룬(2단계)</td><td style="color:white; border:1px solid white;"><center>무기 공격력 증폭 6 증가<br>무기 마법력 증폭 6 증가</td></tr>
+	    <tr><td style="color:white; border:1px solid white;"><center>3</td><td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/orcrune/3.png"><br>빛바랜 오크 전설 룬(3단계)</td><td style="color:white; border:1px solid white;"><center>무기 공격력 증폭 9 증가<br>무기 마법력 증폭 9 증가</td></tr>
+	    <tr><td style="color:white; border:1px solid white;"><center>4</td><td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/orcrune/4.png"><br>빛바랜 오크 전설 룬(4단계)</td><td style="color:white; border:1px solid white;"><center>무기 공격력 증폭 12 증가<br>무기 마법력 증폭 12 증가</td></tr>
+	    <tr><td style="color:white; border:1px solid white;"><center>5</td><td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/orcrune/11.png"><br>희미한 불꽃의 오크 전설 룬(1단계)</td><td style="color:white; border:1px solid white;"><center>무기 공격력 증폭 15 증가<br>무기 마법력 증폭 15 증가<br>방어구 방어력 증폭 1 증가<br>액세서리 마법저항 증폭 1 증가</td></tr>
+	    <tr><td style="color:white; border:1px solid white;"><center>6</td><td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/orcrune/12.png"><br>희미한 불꽃의 오크 전설 룬(2단계)</td><td style="color:white; border:1px solid white;"><center>무기 공격력 증폭 18 증가<br>무기 마법력 증폭 18 증가<br>방어구 방어력 증폭 2 증가<br>액세서리 마법저항 증폭 2 증가</td></tr>
+	    <tr><td style="color:white; border:1px solid white;"><center>7</td><td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/orcrune/13.png"><br>희미한 불꽃의 오크 전설 룬(3단계)</td><td style="color:white; border:1px solid white;"><center>무기 공격력 증폭 21 증가<br>무기 마법력 증폭 21 증가<br>방어구 방어력 증폭 3 증가<br>액세서리 마법저항 증폭 3 증가</td></tr>
+	    <tr><td style="color:white; border:1px solid white;"><center>8</td><td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/orcrune/14.png"><br>희미한 불꽃의 오크 전설 룬(4단계)</td><td style="color:white; border:1px solid white;"><center>무기 공격력 증폭 24 증가<br>무기 마법력 증폭 24 증가<br>방어구 방어력 증폭 4 증가<br>액세서리 마법저항 증폭 4 증가<br>명중 5 증가</td></tr>
+	    <tr><td style="color:white; border:1px solid white;"><center>9</td><td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/orcrune/15.png"><br>희미한 불꽃의 오크 전설 룬(5단계)</td><td style="color:white; border:1px solid white;"><center>무기 공격력 증폭 27 증가<br>무기 마법력 증폭 27 증가<br>방어구 방어력 증폭 5 증가<br>액세서리 마법저항 증폭 5 증가<br>명중 5 증가</td></tr>
+	    <tr><td style="color:white; border:1px solid white;"><center>10</td><td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/orcrune/21.png"><br>불꽃의 오크 전설 룬(1단계)</td><td style="color:white; border:1px solid white;"><center>무기 공격력 증폭 30 증가<br>무기 마법력 증폭 30 증가<br>방어구 방어력 증폭 6 증가<br>액세서리 마법저항 증폭 6 증가<br>명중 10 증가</td></tr>
+	  </table>
+	</div>
+
+</div>
+</div>
+</div></div><br><br>
+   <!-- End -->
+        
+
+    <!-- Copyright Start -->
+	<div id="footer-placeholder"></div>
+	<script>
+	  fetch("https://borinet-dev.github.io/head/footer.html?ver=" + Date.now())
+	    .then(r => r.text())
+	    .then(html => {
+	      document.getElementById("footer-placeholder").innerHTML = html;
+	    });
+	</script>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/wow/wow.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/easing/easing.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/waypoints/waypoints.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/owlcarousel/owl.carousel.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/counterup/counterup.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/parallax/parallax.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/isotope/isotope.pkgd.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://borinet-dev.github.io/css/js/main.js"></script>
+    </body>
+</html>
